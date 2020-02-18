@@ -3,6 +3,11 @@ MediaSoup sample
 Since there are some users (including me) complaining about complexity of [MediaSoup] video conferencing module and lack of small/simple examples, I decided to create a bare minimum example of how can it be used in order to get people to understand it better and allow its faster adoption by the community.  
 This example consists of two independent parts: **frontend** and **server** and implements **many-to-many** video conferencing:
 
+Modifications from original source code
+---------------------------------------
+- adding sample cert
+- use 'https' as default
+
 Frontend
 --------
 It's a minimal GUI that helps to understand better the client side of mediaSoup. It uses socket.io for communication. The reason I chose it over plain websockets is the latter doesn't support message acknowledgment which would result in extra lines of code (which in turn might create additional complexity).  
