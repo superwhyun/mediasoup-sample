@@ -34,6 +34,9 @@ npm start
 ```
 Once that done, you can create/join rooms. Just open in your browser:
 `http://localhost:3000/?roomId=room1&peerName=Alice`  
+Note: there will be no video in the browser until second user comes in
+
+
 And in another tab:
 `http://localhost:3000/?roomId=room1&peerName=Bob`  
 It should create video elements in both tabs with remote peers.
