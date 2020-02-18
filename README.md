@@ -19,6 +19,14 @@ A single file (index.js) that does everything.
 
 Usage
 -----
+
+Zero, edit address
+```
+grep -r 192.168.100.166 *
+```
+replace the address above with yours
+
+
 First, run the server:
 ```
 cd server
