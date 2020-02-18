@@ -34,7 +34,9 @@ npm start
 ```
 Once that done, you can create/join rooms. Just open in your browser:
 `http://localhost:3000/?roomId=room1&peerName=Alice`  
-Note: there will be no video in the browser until second user comes in
+
+Note 1: there will be no video in the browser until second user comes in
+Note 2: Latest chrome does not allow private certificate anymore. However, you just type 'thisisunsafe' in the brower that shows an error regarding security, and you can go further.
 
 
 And in another tab:
