@@ -1,13 +1,21 @@
-const app = require('http').createServer();
+const fs = require('fs');
+const option = {
+	key: fs.readFileSync('../cert/k8s-master.key'),
+        cert: fs.readFileSync('../cert/k8s-master.crt')
+}
+
+const app = require('https').createServer(option);
+//const app = require('http').createServer();
 const io = require('socket.io')(app);
 const config = require('./config');
 const mediasoup = require('mediasoup');
 const port = config.server.port;
-
 // Map of Room instances indexed by roomId.
 const rooms = new Map();
 
-app.listen(port, () => console.log(`MediaSoup server is listening on port ${port}!`));
+app.listen(port, () =>console.log(`MediaSoup server is listening on port ${port}!`));
+
+//app.listen(port, () => console.log(`MediaSoup server is listening on port ${port}!`));
 
 // MediaSoup server
 const mediaServer = mediasoup.Server({
